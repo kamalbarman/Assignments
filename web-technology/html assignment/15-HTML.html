@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Aligning Images with Paragraphs</title>
+  <style>
+    
+    img {
+      max-width: 200px; 
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>aligning images</h1>
+
+  <div class="clearfix">
+    <img src="lava.jpg" alt="Image on the left" style="float: left; margin-right: 10px;">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. 
+      Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+    </p>
+  </div>
+
+  <div class="clearfix">
+    <img src="lava.jpg" alt="Image on the right" style="float: right; margin-left: 10px;">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. 
+      Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+    </p>
+  </div>
+
+</body>
+</html>
