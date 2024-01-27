@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Form Validation</title>
-</head>
-<body>
+<!-- write this code under html body -->
 
-<form id="myForm">
+<!-- <form id="myForm">
   <label for="userId">User ID:</label>
   <input type="text" id="userId" name="userId"><br><br>
 
@@ -13,9 +8,8 @@
   <input type="password" id="password" name="password"><br><br>
 
   <input type="submit" value="Submit">
-</form>
+</form> -->
 
-<script>
   function validateForm(event) {
     event.preventDefault(); 
     let userId = document.getElementById('userId').value;
@@ -35,7 +29,4 @@
   }
 let form = document.getElementById('myForm');
   form.addEventListener('submit', validateForm);
-</script>
 
-</body>
-</html>
