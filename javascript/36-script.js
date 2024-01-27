@@ -10,6 +10,8 @@
   <input type="submit" value="Submit">
 </form> -->
 
+// after write this html codes now write the js code given below
+
   function validateForm(event) {
     event.preventDefault(); 
     let userId = document.getElementById('userId').value;
