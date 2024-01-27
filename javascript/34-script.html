@@ -1,13 +1,6 @@
-<html>
 
-<head>
-  <title>Mouse Click</title>
-</head>
+<!--    id="output">Click anywhere on the page</p> -->
 
-<body>
-  <p id="output">Click anywhere on the page</p>
-
-  <script>
     var p = document.getElementById("output");
     document.addEventListener("click", function (event) {
 
@@ -17,7 +10,3 @@
       p.innerHTML = "Mouse clicked (" + x + ", " + y + ")";
     });
 
-  </script>
-</body>
-
-</html>
