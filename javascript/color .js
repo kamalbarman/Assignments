@@ -12,13 +12,16 @@ function colorChange(color, delay) {
 
 
 async function demo() {
+    try{
     await colorChange("blue", 1000);
     await colorChange("yellow", 1000);
     await colorChange("green", 1000);
     await colorChange("red", 1000);
     await colorChange("violet", 1000);
-
-
+    }catch(err){
+        console.log("error caught");
+        console.log(err);
+    }
 }
 
 // colorChange("blue",1000)
