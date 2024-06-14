@@ -5,4 +5,4 @@
    
         let arr = [1, 2, 3, 4, 5,7,8,9];
         let length = arr.length;
-        alert("The length of the array is: " + length);
+        alert("The length of the array is: " + length)
