@@ -12,7 +12,7 @@ public:
 
     void getdata()
     {
-        cout << "enter the side parameters";
+        cout << "enter the side parameters : ";
         cin >> side1 >> side2 >> side3;
     }
 
