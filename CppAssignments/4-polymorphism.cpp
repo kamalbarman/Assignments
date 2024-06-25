@@ -1,62 +1,62 @@
 #include <iostream>
 
+using namespace std;
+
 class Complex {
 private:
-    double real;
-    double imag;
+    double real; 
+    double imag; 
 
 public:
-    // Default constructor (zero arguments)
-    Complex() : real(0), imag(0) {}
+   
+    Complex() : real(0.0), imag(0.0) {} 
+    Complex(double r) : real(r), imag(0.0) {} 
+    Complex(double r, double i) : real(r), imag(i) {} 
 
-    // Constructor with one argument
-    Complex(double r) : real(r), imag(0) {}
-
-    // Constructor with two arguments
-    Complex(double r, double i) : real(r), imag(i) {}
-
-    // Function to return the real part
-    double rpart() const {
+    
+    double getReal() const {
         return real;
     }
 
-    // Function to return the imaginary part
-    double ipart() const {
+    double getImaginary() const {
         return imag;
     }
 
-    // Function to add two complex numbers
+    
     Complex add(const Complex& other) const {
         return Complex(real + other.real, imag + other.imag);
     }
 
-    // Function to multiply two complex numbers
-    Complex mul(const Complex& other) const {
-        double r = (real * other.real) - (imag * other.imag);
-        double i = (real * other.imag) + (imag * other.real);
-        return Complex(r, i);
-    }
-
-    // Function to display the complex number
-    void display() const {
-        std::cout << real << " + " << imag << "i" << std::endl;
+    Complex multiply(const Complex& other) const {
+        double newReal = real * other.real - imag * other.imag;
+        double newImag = real * other.imag + imag * other.real;
+        return Complex(newReal, newImag);
     }
 };
 
 int main() {
-    Complex c1; // Default constructor
-    Complex c2(3); // Constructor with one argument
-    Complex c3(3, 4); // Constructor with two arguments
+    double real, imag;
 
-    c1.display(); // Output: 0 + 0i
-    c2.display(); // Output: 3 + 0i
-    c3.display(); // Output: 3 + 4i
+   
+    cout << "Enter the real and imaginary parts of the first complex number: ";
+    cin >> real >> imag;
+    Complex z1(real, imag);
 
-    Complex c4 = c3.add(c2); // Adding c3 and c2
-    c4.display(); // Output: 6 + 4i
+    cout << "Enter the real and imaginary parts of the second complex number: ";
+    cin >> real >> imag;
+    Complex z2(real, imag);
 
-    Complex c5 = c3.mul(c2); // Multiplying c3 and c2
-    c5.display(); // Output: 9 + 12i
+  
+    cout << "z1: Real = " << z1.getReal() << ", Imaginary = " << z1.getImaginary() << endl;
+    cout << "z2: Real = " << z2.getReal() << ", Imaginary = " << z2.getImaginary() << endl;
+
+   
+    Complex sum = z1.add(z2);
+    cout << "Sum of z1 and z2: Real = " << sum.getReal() << ", Imaginary = " << sum.getImaginary() << endl;
+
+   
+    Complex product = z1.multiply(z2);
+    cout << "Product of z1 and z2: Real = " << product.getReal() << ", Imaginary = " << product.getImaginary() << endl;
 
     return 0;
 }
