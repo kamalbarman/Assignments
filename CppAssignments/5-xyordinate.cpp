@@ -57,14 +57,14 @@ int main()
 
     try
     {
-        cout << "Slope of line from origin to p2: " << p2.slope() << std::endl;
+        cout << "Slope of line from origin to p2: " << p2.slope() << endl;
     }
     catch (const overflow_error &e)
     {
-        cerr << e.what() << std::endl;
+        cerr << e.what() << endl;
     }
 
-    cout << "Distance between p1 and p2: " << distanceBetweenPoints(p1, p2) << std::endl;
+    cout << "Distance between p1 and p2: " << distanceBetweenPoints(p1, p2) << endl;
 
     return 0;
 }
