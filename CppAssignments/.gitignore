@@ -1,5 +1,2 @@
 a.exe
-# Ignore Linux executables
-*
-!*.c
-!Makefile
+
