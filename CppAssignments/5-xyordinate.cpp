@@ -63,8 +63,6 @@ int main()
     {
         cerr << e.what() << endl;
     }
-
     cout << "Distance between p1 and p2: " << distanceBetweenPoints(p1, p2) << endl;
-
     return 0;
 }
